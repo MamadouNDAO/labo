@@ -1,0 +1,101 @@
+@import "./colors";
+
+button{
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+button.nd-primo{
+  background: $primary-blue;
+  color: #fff;
+}
+
+button.nd-blanco{
+  background: #fff;
+  color: $primary-blue;
+}
+
+button.primary {
+  font-size: 1rem;
+  min-width: 7rem !important;
+  padding: 1rem 2rem !important;
+  height: 3rem !important;
+  background-color: $primary-blue !important;
+  color: white !important;
+
+  &.cdk-keyboard-focused {
+    outline: 2px solid $dark-blue !important;
+    outline-offset: 5px !important;
+  }
+
+  .mdc-button__ripple {
+    &::before {
+      background-color: $primary-blue-hover !important;
+    }
+  }
+
+  &:hover,
+  &.cdk-keyboard-focused {
+    background-color: $primary-blue-hover !important;
+  }
+
+  &[disabled="true"] {
+    opacity: 0.5;
+  }
+}
+
+button.secondary {
+  font-size: 1rem;
+  min-width: 7rem !important;
+  padding: 1rem 2rem !important;
+  height: 3rem !important;
+  background-color: $white !important;
+  border: 1px solid $primary-blue !important;
+
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &.cdk-keyboard-focused {
+    outline: 2px solid $dark-blue !important;
+    outline-offset: 5px !important;
+
+    .mdc-button__ripple {
+      &::before {
+        background-color: white !important;
+      }
+    }
+  }
+
+  span {
+    color: $primary-blue !important;
+  }
+}
+
+button.basic {
+  background: none !important;
+  border: none;
+  border-radius: 4px;
+  color: $primary-text-color !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-text-color !important;
+    outline-offset: 5px !important;
+  }
+
+  &[disabled] {
+    opacity: 0.7;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
