@@ -1,0 +1,188 @@
+@import "../../../styles/colors";
+.page{
+
+  .corps{
+    height: 95dvh !important;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    .side-left, .side-right{
+      //border: solid 1px red;
+    }
+
+    .side-left{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .top-stats{
+        display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 10px;
+
+      }
+
+      .content-chart{
+        //border: solid 1px red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: rgba(0, 98, 176, 0.07);
+        padding: 20px;
+        border-radius: 10px;
+        height: 100%;
+        .titre-graph{
+          color: $primary-blue;
+          font-size: 17px;
+          font-weight: 700;
+          text-decoration: underline;
+          margin-top: 20px;
+        }
+      }
+    }
+    .side-right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .pie-part, .table-part{
+        width: 100%;
+        background: rgba(0, 98, 176, 0.07);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .pie-part{
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .titre-graph{
+          color: $primary-blue;
+          font-size: 17px;
+          font-weight: 700;
+          text-decoration: underline;
+          margin-top: 20px;
+        }
+      }
+
+      .table-part{
+        height: 40%;
+        table{
+          border-collapse: collapse;
+          width: 100%;
+          tr{
+           //border: solid 1px $secondary-blue;
+          }
+          tr, td{
+            padding: 10px;
+          }
+          tr:nth-child(even) {
+            background-color: $primary-blue;
+            color: #fff;
+          }
+          .pp-user{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .corps{
+    .side-left, .side-right{
+      width: 100%;
+    }
+    .titre-graph{
+      color: $primary-blue;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      text-decoration: underline;
+      margin-top: 10px !important;
+    }
+    .pie-part{
+      height: auto !important;
+    }
+    .table-part{
+     // display: none;
+    }
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .corps{
+    .side-left, .side-right{
+      width: 100%;
+    }
+    .titre-graph{
+      color: $primary-blue;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      text-decoration: underline;
+      margin-top: 10px !important;
+    }
+    .pie-part{
+      height: auto !important;
+    }
+    .table-part{
+      // display: none;
+    }
+  }
+
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .page {
+    min-height: 100dvh !important;
+    overflow: auto;
+  }
+  .corps{
+    .side-left, .side-right{
+      width: 100%;
+    }
+    .titre-graph{
+      color: $primary-blue;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      text-decoration: underline;
+      margin-top: 10px !important;
+    }
+    .pie-part{
+      height: auto !important;
+    }
+    .table-part{
+      display: none;
+    }
+  }
+
+}

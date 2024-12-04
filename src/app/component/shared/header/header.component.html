@@ -1,0 +1,43 @@
+<div class="header d-flex align-items-center justify-content-between w-100">
+  <div class="info-menu d-flex flex-row align-items-center justify-content-start ">
+    <i (click)="openCloseMenu()" class="fa-solid fa-bars"></i>
+    <span>Tableau de bord</span>
+  </div>
+
+  <div class="info-user d-flex flex-row align-items-center">
+    <span class="user-name">Mamadou NDAO</span>
+    <div class="notif">
+      <img src="icons/blue/notification.svg" alt="">
+      <div class="badge">
+        <span>3</span>
+      </div>
+    </div>
+    <div class="avatar">
+      <img src="images/user.jpg" alt="">
+    </div>
+  </div>
+
+  @if (viewMenu) {
+    <div class="transparent-bg" (click)="viewMenu = false">
+    </div>
+    <div [ngClass]="viewMenu ? 'slide-fwd-right' : 'slide-fwd-left'" class="menu-sidebar ">
+      <div class="inner">
+        <span>Menu</span>
+      </div>
+      <div class="list-menu">
+        @for (m of menus; track m.name) {
+          <div class="item-menu" [routerLink]="m.route">
+            <img [src]="'icons/blue/'+m.icon+'.svg'" alt="">
+            <span>{{ m.name }}</span>
+          </div>
+        }
+        <div class="item-menu">
+          <img src="icons/blue/logout.svg" alt="">
+          <span>Se déconnecter</span>
+        </div>
+      </div>
+    </div>
+  }
+
+</div>
+

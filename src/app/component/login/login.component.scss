@@ -1,0 +1,53 @@
+.page{
+  height: 100dvh;
+  width: 100vw;
+  background: url("../../../assets/images/bg/bg02.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  .logo{
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .cadre-login{
+    background: rgba(1, 17, 35, 0.58);
+    margin: 5% auto auto;
+    border-radius: 10px;
+    padding: 30px;
+    .grp-inpt{
+      span{
+        color: white;
+      }
+      input{
+        background: rgba(1, 17, 35, 0.76);
+        border: none !important;
+        color: white;
+        width: 100%;
+      }
+    }
+
+    .remember{
+      color: white;
+    }
+
+
+    button{
+      width: 100%;
+      color: rgb(1, 17, 35);
+      font-size: 20px;
+    }
+
+    .forget{
+      color: #728491;
+      cursor: pointer;
+    }
+  }
+
+  .footer-copy{
+    position: absolute;
+    bottom: 20px;
+    color: #728491;
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,80 @@
+<div class="page">
+  <div class="w-100">
+    <app-header></app-header>
+  </div>
+  <div class="corps w-100">
+    <div class="side-left h-100">
+      <div class="top-stats w-100">
+        @for (card of cards; track card.label) {
+          <app-stat-card-item [card]="card"></app-stat-card-item>
+        }
+      </div>
+      <div class="content-chart w-100">
+        @if (graphEvoTests) {
+          <app-graph [graphData]="graphEvoTests"></app-graph>
+          <span class="titre-graph">Evolution des tests par mois (2024)</span>
+        }
+      </div>
+    </div>
+    <div class="side-right h-100">
+      <div class="pie-part">
+        @if (graphTestPerEquipement) {
+          <app-graph-pie [graphData]="graphTestPerEquipement"></app-graph-pie>
+          <span class="titre-graph">Nombre de tests par appareil</span>
+        }
+      </div>
+      <div class="table-part">
+        <table>
+          <tr>
+            <th>Profil</th>
+            <th>Contact</th>
+            <th>Country</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="pp-user">
+                <img src="images/user.jpg" alt="">
+              </div>
+            </td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pp-user">
+                <img src="images/user.jpg" alt="">
+              </div>
+            </td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pp-user">
+                <img src="images/user.jpg" alt="">
+              </div>
+            </td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pp-user">
+                <img src="images/user.jpg" alt="">
+              </div>
+            </td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Germany</td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

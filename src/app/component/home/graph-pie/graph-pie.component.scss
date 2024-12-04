@@ -1,0 +1,13 @@
+.data-chart{
+  //width: 80%;
+  height: auto;
+  background: none !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .data-chart{
+    width: 100% !important;
+    height: 100% !important;
+    background: none !important;
+  }
+}

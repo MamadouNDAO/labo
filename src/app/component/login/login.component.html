@@ -1,0 +1,43 @@
+<div class="page">
+  <div class="container">
+    <div class="row pad-20">
+      <div class="col-12">
+        <span class="logo fw-700">Sunu-Labo</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-8 cadre-login pad-20">
+        <div class="w-100">
+          <span class="logo fw-700 text-center">Connexion</span>
+        </div>
+        <br>
+        <div class="grp-inpt mb-4">
+          <span>Email</span>
+          <input type="email" placeholder="Votre adresse mail">
+        </div>
+        <div class="grp-inpt mb-4">
+          <span>Mot de passe</span>
+          <input type="password" placeholder="Votre mot de passe">
+        </div>
+        <div class="w-100 d-flex flex-row mb-4 remember">
+          <input type="checkbox" name="" id="">
+          <span>Se souvenir de moi</span>
+        </div>
+        <button *ngIf="!isLoading" (click)="login()" class="nd-blanco fw-600 mb-4">Se connecter</button>
+        <div *ngIf="isLoading" class="w-100 d-flex align-content-center justify-content-center mb-4">
+          <div class="loader"></div>
+        </div>
+        <div class="w-100 text-center">
+          <span class="forget">Mot de passe oublié?</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-100 footer-copy text-center">
+    <span>&copy; Copyright 2024 DIGITAL HIMMA . All rights reserved</span>
+  </div>
+
+
+</div>
