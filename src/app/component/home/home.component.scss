@@ -26,11 +26,18 @@
       }
 
       .content-chart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         background: rgba(0, 98, 176, 0.07);
         padding: 20px;
         border-radius: 10px;
         height: 100%;
+        .parent-chart{
+          height: 100%;
+        }
         .titre-graph{
           color: $primary-blue;
           font-size: 17px;

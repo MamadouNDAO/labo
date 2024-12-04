@@ -11,8 +11,11 @@
       </div>
       <div class="content-chart w-100">
         @if (graphEvoTests) {
-          <app-graph [graphData]="graphEvoTests"></app-graph>
-          <span class="titre-graph">Evolution des tests par mois (2024)</span>
+
+          <div class="w-100 parent-chart" >
+            <app-graph [graphData]="graphEvoTests"></app-graph>
+          </div>
+          <span class="titre-graph">Evolution des tests par mois (2025)</span>
         }
       </div>
     </div>
