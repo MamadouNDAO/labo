@@ -8,7 +8,7 @@ import { withNgxsStoragePlugin } from '@ngxs/storage-plugin';
 import { provideStore } from '@ngxs/store';
 import {LaboRootState} from './store/labo-root/labo-root.state';
 import {DashboardState} from './store/dashboard/dashboard.state';
-import {MenuState} from './store/menu/menu.state';
+import {MenuState} from './store/menu/menu.state'; 
 
 export const appConfig: ApplicationConfig = {
   providers: [
